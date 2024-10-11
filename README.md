@@ -1,4 +1,4 @@
-This project is a weather forecasting web application built using Flask for the backend and HTML, CSS, and JavaScript for the frontend. The app allows users to input a city name and retrieve real-time weather data, including temperature and weather conditions such as "Clear," "Clouds," or "Rain," which are displayed with relevant emojis.
+This project is a WEATHER FORECASTING WEB APPLICATION built using Flask for the backend and HTML, CSS, and JavaScript for the frontend. The app allows users to input a city name and retrieve real-time weather data, including temperature and weather conditions such as "Clear," "Clouds," or "Rain," which are displayed with relevant emojis.
 
 *Frontend (HTML/CSS/JavaScript):
 
