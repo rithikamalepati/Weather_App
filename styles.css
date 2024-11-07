@@ -1,0 +1,71 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif; /* Font style for the entire body */
+    background-color: #e0f7fa; /* Light blue background */
+    color: #333; /* Dark text color */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Styling for the container */
+.container {
+    text-align: center; /* Center text within the container */
+    background-color: #ffffff; /* White background for the card */
+    padding: 30px; /* Padding inside the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+    display: flex; /* Enable flexbox for the container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Hover effect for the container */
+.container:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Styling for input field */
+input[type="text"] {
+    padding: 10px; /* Padding inside the input field */
+    border: 2px solid #00796b; /* Teal border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below the input field */
+    width: 80%; /* Responsive width */
+    max-width: 300px; /* Maximum width */
+}
+
+/* Styling for the button */
+button {
+    padding: 10px 15px; /* Padding inside the button */
+    background-color: #00796b; /* Teal background for button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    width: 80%; /* Responsive width */
+    max-width: 150px; /* Maximum width */
+}
+
+/* Hover effect for the button */
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+/* Styling for output text */
+.output {
+    margin-top: 20px; /* Space above the output text */
+    font-size: 1.2em; /* Larger font size for output */
+    text-align: center; /* Center text output */
+}
+
+/* Styling for error messages */
+.error {
+    color: red; /* Red for error messages */
+    text-align: center; /* Center error messages */
+}

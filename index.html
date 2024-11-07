@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container"> <!-- Added container div -->
+        <h1>Weather App</h1>
+        <input type="text" id="city" placeholder="Enter city" required>
+        <button id="get-weather">Get Weather</button>
+
+        <div id="weather-info" class="output"></div> <!-- Added class "output" for styling -->
+        <div class="error" id="error-message"></div> <!-- Added error message div -->
+    </div>
+
+    <script>
+        document.getElementById('get-weather').onclick = async function() {
+            const city = document.getElementById('city').value;
+            const apiKey = 'd5f0c918988510d1a2c624242371fa98';
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.cod !== 200) {
+                document.getElementById('error-message').innerText = "City not found. Please try again."; // Set error message
+                document.getElementById('weather-info').innerHTML = ""; // Clear weather info
+                return;
+            }
+
+            const weather = data.weather[0].main;
+            const temp = data.main.temp;
+            const emoji = getWeatherEmoji(weather);
+
+            document.getElementById('weather-info').innerHTML = `
+                <h2>Weather in ${city}:</h2>
+                <p>${emoji} ${weather}</p>
+                <p>Temperature: ${temp} °F</p>
+            `;
+            document.getElementById('error-message').innerText = ""; // Clear error message
+        };
+
+        function getWeatherEmoji(weather) {
+            const emojiDict = {
+                'Clear': '☀️',
+                'Clouds': '☁️',
+                'Rain': '🌧️',
+                'Snow': '❄️',
+                'Drizzle': '🌦️',
+                'Thunderstorm': '⛈️',
+                'Mist': '🌫️'
+            };
+            return emojiDict[weather] || '🌍';
+        }
+    </script>
+</body>
+</html>
