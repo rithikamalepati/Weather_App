@@ -11,4 +11,4 @@ This is a Python-based app that uses the OpenWeatherMap API to provide real-time
 * Technologies Used:
 
   * Frontend: Python (for backend logic), OpenWeatherMap API (for weather data).
-  * Framework: Python (for app development).
+  * Framework: Flask.
